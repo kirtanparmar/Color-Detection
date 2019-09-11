@@ -1,2 +1,3 @@
 # Color-Detection
-Python Project - OpenCV Repo Detect Blue Color.
+Python Project using OpenCV repository.
+Detects Blue Color.
