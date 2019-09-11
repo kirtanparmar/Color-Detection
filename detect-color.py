@@ -13,18 +13,11 @@ while(1):
   
     mask = cv2.inRange(hsv, lower_blue, upper_blue) 
     res = cv2.bitwise_and(frame, frame, mask = mask) 
-
-    lower_red = np.array([50, 50, 100])
-    upper_red = np.array([255, 255, 150])
-
-    mask_red = cv2.inRange(hsv, lower_red, upper_red)
-    res_red = cv2.bitwise_and(frame, frame, mask = mask_red)
-
+    
     cv2.imshow('frame', frame)
-    #cv2.imshow('mask', mask) 
+    cv2.imshow('mask', mask) 
     cv2.imshow('res', res)
-    cv2.imshow('res_red', res_red)
-  
+    
     k = cv2.waitKey(5) & 0xFF
     if (k == 27): 
         break
